@@ -1,0 +1,33 @@
+﻿@model ProjetoFinalBaza.Models.ProcedimentoRealizacao
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Imprimir.css"/>
+
+
+<main class="t1">
+        <div class="g">
+            <img src="" alt="" class="logo"> 
+            <h1>Clínica LaBaza</h1>
+            <div class="g1">
+            <span>Paciente: @Html.DisplayFor(model => model.Cliente.ClienteNome)</span> <span>Sexo: @Html.DisplayFor(model => model.Cliente.ClienteSexo)</span><span>Clinica:LaBaza</span>
+            </div>
+            <div class="g10">
+                <div class="g2">
+                    <span>Colesterol</span> 
+                    <span>Dosagem no soro</span>                  
+                </div>
+                <div class="g3">
+                <span>@Html.DisplayFor(model => model.DataRealizacao)</span>
+                </div>
+            </div>
+            <hr>
+            <div class="g5">
+                <span> @Html.DisplayFor(model => model.ObservacaoRealizacao)</span>
+            </div>
+            <hr>
+            <div class="g6">
+                <span>Metodologia: Jaffé automatizado</span>
+            </div>
+        </div>
+    </main>
